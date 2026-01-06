@@ -4,6 +4,200 @@
 
 \chapter{Softwareselectie voor het voorraadsysteem}%
 \label{ch:softwareselectie}
+Om software te selecteren, is het noodzakelijk om de eisen van de gebruiker te kennen.
+De volgende stap is het samenstellen van een lange lijst met applicaties op basis van de vraag en de tevredenheidsscores van gebruikers.
+Vervolgens wordt een korte lijst samengesteld ter vergelijking op basis van criteria.
+Dit bepaalt de meest geschikte software op basis van functionele en niet-functionele eisen.
+
+\section{Vereisten voor het voorraadsysteem}
+Deze sectie bevat een lijst met eisen, inclusief een indicatie van het belang van elke eis, gebaseerd op de MoSCoW-methode.
+De MoSCoW-methode wordt gebruikt om vereisten te prioriteren: Must-have vereisten zijn essentieel voor het functioneren van het systeem, Should-have vereisten zijn belangrijk maar niet kritisch, en Could-have vereisten zijn optioneel.
+
+Tabel 4.1 geeft een overzicht van de functionele en niet-functionele vereisten van het softwaresysteem. De vereisten zijn geprioriteerd volgens de MoSCoW-methode, waarbij onderscheid wordt gemaakt tussen essentiële, gewenste en optionele functionaliteiten. Deze prioritering helpt bij het plannen van de implementatie en het afbakenen van de scope van het project.
+
+\begin{table}[H]
+    \centering
+    \caption{Functionele en niet-functionele vereisten met MoSCoW-prioriteiten}
+    \label{tab:requirements}
+    \begin{tabularx}{\textwidth}{l X c}
+        \toprule
+        \textbf{Categorie} & \textbf{Vereiste} & \textbf{Prioriteit} \\
+        \midrule
+        
+        \textbf{Functioneel} 
+        & Voorraadniveau-tracking & M \\
+        & Voorraadbeheer voor meerdere locaties & M \\
+        & Leveranciersbeheer & S \\
+        & Inkooporderbeheer & M \\
+        & Voorraadverplaatsing tussen locaties & S \\
+        & Waarschuwingen bij lage voorraad & M \\
+        & Barcode-scanning & C \\
+        & Gebruikersrollen en rechten & M \\
+        & Rapportage en analyse & S \\
+        & Registratie van vervaldatums & M \\
+        & Rapportage van naderende vervaldatums & S \\
+        
+        \midrule
+        
+        \textbf{Niet-functioneel}
+        & Prestaties (kleine tot middelgrote belasting) & M \\
+        & Schaalbaarheid (meerdere vestigingen) & S \\
+        & Gebruiksvriendelijkheid (niet-technische gebruikers) & M \\
+        & Onderhoudbaarheid & S \\
+        & Aanpasbaarheid & C \\
+        & Kwaliteit van documentatie & S \\
+        & Leercurve & M \\
+        & Beveiliging (RBAC, authenticatie) & M \\
+        & API-beschikbaarheid & C \\
+        & Eenvoudige deployment & S \\
+        & Community-ondersteuning & C \\
+        
+        \bottomrule
+    \end{tabularx}
+\end{table}
 
 
+\section{Lange lijst van voorraadsystemen}
 
+
+Om de initiële selectie van voorraadbeheer- en ERP-systemen te onderbouwen, werden openbaar beschikbare populariteitsstatistieken geanalyseerd.
+Aangezien alle geselecteerde systemen open source zijn, werden GitHub-sterren gebruikt als een vergelijkbare maatstaf voor de interesse en acceptatie binnen de community.
+Tegelijkertijd werd de tevredenheid over deze aanbiedingen geanalyseerd op basis van gebruikersrecensies.
+Beide meetgegevens werden gecombineerd tot een eindscore en weergegeven in een grafiek.
+
+Figuur~\ref{fig:graf1} toont een vergelijking van tien softwaresystemen op basis van populariteitsstatistieken.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{graf1.png}
+    \caption{Populariteitsvergelijking van tien voorraadbeheer- en ERP-systemen}
+    \label{fig:graf1}
+\end{figure}
+
+
+Hieronder volgt een korte beschrijving van de geselecteerde opties, die een \textbf{lange lijst} vormen:
+\begin{enumerate}
+    \item[(1)] \textit{ERPNext} Het beste voor kleine tot middelgrote bedrijven 
+    \item[(2)] \textit{Axelor} Het beste voor hybride technologie 
+    \item[(3)] \textit{Apache OFBiz} Het beste voor aanpasbare oplossingen 
+    \item[(4)] \textit{Flectra} Het beste voor alles-in-één oplossingen 
+    \item[(5)] \textit{Dolibarr} Het beste voor eenvoudige integratie 
+    \item[(6)] \textit{ERP5} Het beste voor complexe bedrijfsbehoeften 
+    \item[(7)] \textit{Open Source Point of Sale (OSPOS)} Het beste voor de detailhandel 
+    \item[(8)] \textit{FrontAccounting} Het beste voor boekhouding 
+    \item[(9)] \textit{InvenTree} Het beste voor elektronica-inventarisatie 
+    \item[(10)] \textit{Openboxes} Het beste voor logistiek in de gezondheidszorg 
+\end{enumerate}
+
+\section{Korte lijst van voorraadsystemen}
+Voor de vergelijkende analyse is gekozen voor software geschreven in Python. Python is om de volgende redenen als primaire technologie voor deze scriptie gekozen:
+\begin{enumerate}
+    \item[(a)] Hoge leesbaarheid en eenvoud, geschikt voor academische analyses en prototyping.
+    \item[(b)] Ontwikkeld ecosysteem (Django, REST API, data-analyse, rapportagetools).
+    \item[(c)] Wijdverspreide toepassing in ERP- en voorraadbeheersystemen.
+    \item[(d)] Gemakkelijk aanpasbaar, belangrijk voor het afstemmen van systemen op de behoeften van gespecialiseerde koffiebars.
+    \item[(e)] Uitstekende ondersteuning voor dataverwerking, forecasting en rapportage (bijv. het bijhouden van vervaldatums).
+\end{enumerate}
+
+Vanuit het perspectief van de bachelorscriptie biedt Python:
+\begin{itemize}
+    \item gemakkelijker te begrijpen code,
+    \item snellere uitbreiding van functionaliteit,
+    \item een meer visuele demonstratie van softwareontwikkelingsprincipes.
+\end{itemize}
+
+Daarom is een \textbf{korte lijst} samengesteld van potentieel geschikte software. Deze omvatte:
+\begin{enumerate}
+    \item InvenTree
+    \item ERPNext
+    \item Flectra
+    \item ERP5
+\end{enumerate}
+
+\section{Analyse van geselecteerde voorraadbeheersoftware op naleving van de vereisten}
+
+In deze fase werd elk voorraadbeheersysteem op de shortlist geanalyseerd op naleving van de eisen. Voor de duidelijkheid worden alle resultaten in tabellen weergegeven.
+
+Tabel~\ref{tab:functional} presenteert een vergelijking van elf functionele vereisten die zijn geëvalueerd voor vier voorraadbeheer- en ERP-systemen: InvenTree, ERPNext, Flectra en ERP5.
+
+De geselecteerde vereisten weerspiegelen de operationele behoeften van een keten van speciaalzaken voor koffie, met een bijzondere focus op voorraadbeheer, interactie met leveranciers, productverplaatsing tussen verkooppunten en houdbaarheidsbeheer van bederfelijke producten.
+
+\begin{table}[h]
+    \centering
+    \caption{Naleving van de functionele eisen van geselecteerde voorraadbeheersystemen}
+    \label{tab:functional}
+    \begin{tabular}{lcccc}
+        \hline
+        \textbf{Vereiste} & \textbf{InvenTree} & \textbf{ERPNext} & \textbf{Flectra} & \textbf{ERP5} \\
+        \hline
+        Voorraadbeheer & \cmark & \cmark & \cmark & \cmark \\
+        Voorraadbeheer op meerdere locaties & ? & \cmark & \cmark & \cmark \\
+        Leveranciersbeheer & \cmark & \cmark & \cmark & \cmark \\
+        Beheer van inkooporders & ? & \cmark & \cmark & \cmark \\
+        Voorraadoverdracht tussen locaties & ? & \cmark & \cmark & \cmark \\
+        Waarschuwingen bij lage voorraad & \cmark & \cmark & \cmark & \cmark \\
+        Barcodescanning & \cmark & \cmark & ? & ? \\
+        Gebruikersrollen en -rechten & \cmark & \cmark & \cmark & \cmark \\
+        Rapportage en analyses & ? & \cmark & ? & \cmark \\
+        Bewaking van vervaldatums & \cmark & ? & ? & ? \\
+        Vervalwaarschuwingsrapport & ? & ? & ? & ? \\
+        \hline
+    \end{tabular}
+\end{table}
+
+De analyse toont aan dat ERPNext, Flectra en ERP5 een brede dekking bieden van standaard ERP-functionaliteiten zoals leveranciersbeheer, inkooporderverwerking, gebruikersrolbeheer en rapportagemogelijkheden.
+
+Deze systemen zijn ontworpen als volwaardige ERP-platformen (Enterprise Resource Planning) en ondersteunen daarom een ​​breed scala aan bedrijfsprocessen, naast voorraadbeheer.
+
+InvenTree daarentegen richt zich specifiek op voorraadgerelateerde functionaliteit.
+
+Hoewel het geen volledige ERP-functies biedt, zoals geïntegreerde inkoopworkflows, ondersteunt het wel alle voorraadgerelateerde vereisten, waaronder voorraadbeheer op meerdere locaties, voorraadtransfers, barcodescanning en waarschuwingen voor lage voorraadniveaus.
+
+Op basis van de evaluatie van de functionele vereisten blijkt InvenTree het beste aan te sluiten bij de voorraadspecifieke behoeften van de casestudy, met name op het gebied van houdbaarheidsbeheer en voorraadtraceerbaarheid.
+
+Tabel~\ref{tab:nonfunctional} vergelijkt de vier geselecteerde systemen met betrekking tot elf niet-functionele eisen die de kwaliteitskenmerken van het systeem beschrijven, waaronder prestaties, schaalbaarheid, bruikbaarheid, onderhoudbaarheid en uitbreidbaarheid.
+
+\begin{table}[h]
+    \centering
+    \caption{Naleving van niet-functionele eisen door geselecteerde voorraadbeheersystemen}
+    \label{tab:nonfunctional}
+    \begin{tabular}{lcccc}
+        \hline
+        \textbf{Vereiste} & \textbf{InvenTree} & \textbf{ERPNext} & \textbf{Flectra} & \textbf{ERP5} \\
+        \hline
+        Prestaties (kleine tot middelgrote belasting) & \cmark & ? & ? & ? \\
+        Schaalbaarheid (veel vestigingen) & ? & \cmark & ? & \cmark \\
+        Gebruiksgemak (niet-technische gebruikers) & ? & \cmark & \cmark & \xmark \\
+        Onderhoudbaarheid & \cmark & ? & ? & \xmark \\
+        Aanpasbaarheid & \cmark & \cmark & \cmark & ? \\
+        Kwaliteit van de documentatie & ? & \cmark & ? & \xmark \\
+        Leercurve & ? & \cmark & ? & \xmark \\
+        Beveiliging (RBAC, authenticatie) & \cmark & \cmark & \cmark & \cmark \\
+        API-beschikbaarheid & \cmark & \cmark & \cmark & ? \\
+        Eenvoudige implementatie & ? & ? & ? & \xmark \\
+        Communityondersteuning & ? & \cmark & ? & \xmark \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+De resultaten tonen aan dat ERPNext en ERP5 zijn ontworpen voor grote bedrijfsomgevingen en daarom een ​​hoge schaalbaarheid en uitgebreide aanpassingsmogelijkheden bieden.
+
+Deze architectonische complexiteit verhoogt echter de leercurve en de onderhoudsinspanning, wat problematisch kan zijn voor kleine en middelgrote organisaties.
+
+Flectra is een tussenoplossing die modulaire uitbreidbaarheid en acceptabele gebruiksvriendelijkheid biedt, terwijl het een relatief brede ERP-systeemdekking behoudt.
+
+InvenTree presteert goed bij kleine en middelgrote workloads en biedt een hoge onderhoudbaarheid dankzij de modulaire, op Python gebaseerde architectuur.
+
+De heldere code, uitgebreide documentatie en actieve open-source community maken het bijzonder geschikt voor aanpassingen.
+
+Bovendien biedt InvenTree een goed gedocumenteerde REST API en eenvoudige implementatieopties, wat snelle prototyping en experimentele ontwikkeling mogelijk maakt.
+
+Vanuit een niet-functioneel perspectief biedt InvenTree de meest gunstige balans tussen systeemcomplexiteit, onderhoudbaarheid en aanpassingsmogelijkheden.
+
+Deze eigenschappen zijn vooral belangrijk voor bacheloropleidingen, waar de belangrijkste vereiste het vermogen is om een ​​systeem te begrijpen, aan te passen en uit te breiden.
+
+Een uitgebreide analyse van functionele en niet-functionele eisen toont duidelijk aan dat InvenTree het meest geschikte systeem is voor verdere ontwikkeling en evaluatie.
+
+Hoewel ERPNext, Flectra en ERP5 uitgebreide ERP-functionaliteit bieden, overstijgt hun complexiteit de behoeften van de voorgestelde use case en de reikwijdte van een bachelorscriptie.
+
+De focus van InvenTree op voorraadbeheer, de ingebouwde ondersteuning voor het beheer van vervaldatums en de op Python gebaseerde architectuur maken het de optimale keuze voor het implementeren en uitbreiden van de voorraadbeheerfunctionaliteit voor een keten van speciaalzaken voor koffie.

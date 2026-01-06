@@ -34,22 +34,45 @@ Hiertoe is het werk verdeeld in de volgende fasen: literatuuronderzoek, bepalen 
 
 Het werk begon met het definiëren van vereisten voor een inventarisatiesysteem voor de koffieketen IzyCoffee.
 
-Vervolgens werden de vereisten gerangschikt met behulp van de MoSCoW-methode. Deze werd gebruikt om elke vereiste te prioriteren. Dit creëerde een meetbare basis voor de selectie van de meest geschikte software.
+Nadat de vereisten voor het voorraadbeheersysteem waren vastgesteld, werden deze in samenwerking met de aankoopmanager van IzyCoffee geprioriteerd aan de hand van de MoSCoW-methode.
 
-De volgende stap was het opstellen van een lange lijst met bestaande voorraadbeheersoftware.
+De MoSCoW-methode is een veelgebruikte prioriteringstechniek binnen softwareontwikkeling en projectmanagement. Zij verdeelt vereisten in vier categorieën: Must have, Should have, Could have en Won’t have. Deze indeling biedt een duidelijk overzicht van welke functionaliteiten essentieel zijn en welke als aanvullend of minder kritisch kunnen worden beschouwd ~\autocite{Suchetha2024}.
 
-Vervolgens werden de drie programma's die het beste aan de vereisten voldeden, geselecteerd en vergeleken.
-Dit bepaalde welke software het meest geschikt was voor de bedrijfsdoelstellingen van de koffieketen IzyCoffee.
+Binnen deze studie werd de MoSCoW-methode toegepast om aan elk vereiste een expliciete prioriteit toe te kennen. Hierdoor kon de focus worden gelegd op kernfunctionaliteiten die noodzakelijk zijn voor een correcte werking van het voorraadbeheersysteem, terwijl minder kritische vereisten afzonderlijk werden behandeld. De gezamenlijke prioritering met de aankoopmanager zorgde er bovendien voor dat zowel operationele als financiële perspectieven werden meegenomen bij het bepalen van de prioriteiten.
+
+Deze werkwijze resulteerde in een concreet en meetbaar beoordelingskader, dat toelaat om verschillende softwareoplossingen op een consistente en objectieve manier met elkaar te vergelijken en zo tot een weloverwogen selectie te komen voor de koffieketen IzyCoffee.
+
+In een volgende fase van het onderzoek werd een uitgebreide longlist opgesteld van bestaande softwareoplossingen voor voorraadbeheer. Deze inventarisatie had tot doel een breed overzicht te verkrijgen van de beschikbare systemen op de markt die in aanmerking komen voor toepassing binnen een kleine tot middelgrote onderneming.
+
+Aangezien deze studie zich richt op het identificeren van haalbare oplossingen voor het midden- en kleinbedrijf, werd het open-sourcekarakter als eerste en doorslaggevend selectiecriterium gehanteerd. Open-sourcesoftware biedt voor kleine ondernemingen verschillende voordelen, waaronder het ontbreken van licentie- en abonnementskosten, een lagere instapdrempel en de mogelijkheid tot aanpassing aan specifieke bedrijfsprocessen. Daarnaast draagt de transparantie van de broncode bij aan een betere controle over gegevens en vergroot zij de onafhankelijkheid van externe softwareleveranciers.
+
+Naast het open-sourcecriterium werd bijzondere aandacht besteed aan de ervaringen van eindgebruikers. Bij de samenstelling van de longlist werd rekening gehouden met gebruikersbeoordelingen en tevredenheidsscores, zoals weergegeven in online reviews en commentaren. Ook kwantitatieve indicatoren, waaronder het aantal downloads of installaties, werden meegenomen als maatstaf voor de mate van adoptie en het praktische draagvlak van de softwareoplossingen.
+
+Door deze combinatie van functionele toegankelijkheid, economische haalbaarheid en gebruikersgerichte evaluatie ontstond een onderbouwde en relevante longlist, die als uitgangspunt diende voor de verdere analyse en selectie van geschikte voorraadbeheersoftware voor kleine ondernemingen.
+
+In de laatste fase van de werk werd de eerder opgestelde longlist systematisch teruggebracht tot een beperktere shortlist van softwareoplossingen die in aanmerking kwamen voor een meer diepgaande analyse. Het doel van deze stap was om enkel die systemen te selecteren die technisch en functioneel het best aansluiten bij de doelstellingen van het onderzoek.
+
+Bij deze verfijning werden specifieke technische selectiecriteria gehanteerd. In de eerste plaats werd de voorkeur gegeven aan software die ontwikkeld is in de programmeertaal Python, omwille van de brede ondersteuning, de actieve ontwikkelgemeenschap en de geschiktheid voor dataverwerking en analyse. Daarnaast werd de aanwezigheid van een REST API als essentieel criterium beschouwd, aangezien deze integratiemogelijkheden biedt met andere systemen en toekomstige uitbreidingen faciliteert.
+
+Verder werd nagegaan in welke mate de geselecteerde software ondersteuning biedt voor dataverwerking en data-analyse, wat van belang is voor rapportering, besluitvorming en opvolging van voorraadstromen. Tot slot speelde ook de aanpasbaarheid van de software een belangrijke rol, waarbij werd gekeken naar de mate waarin het systeem kan worden afgestemd op de specifieke behoeften en processen van een onderneming.
+
+Door toepassing van deze criteria kon de longlist worden teruggebracht tot een gerichte shortlist van softwareoplossingen, die als basis diende voor de verdere, gedetailleerde evaluatie binnen het kader van dit onderzoek.
 
 
 \section{Proof of concept}
-In deze fase werden de functies van de geselecteerde software geëvalueerd en vergeleken met de eisen van het bedrijf. Vereisten die niet door de functionaliteit van de geselecteerde software werden gedekt, werden geïdentificeerd. Om deze hiaten op te vullen, werden oplossingsvoorstellen ontwikkeld en gepresenteerd.
-De laatste fase van deze fase was de ontwikkeling van een proof-of-concept (PoC). Om de geselecteerde software te optimaliseren en te zorgen dat deze voldoet aan beschreven eisen, werden wijzigingen in de code ontwikkeld en geïmplementeerd.
+In deze fase werden de functionaliteiten van de geselecteerde software systematisch geëvalueerd en afgezet tegen de vastgestelde bedrijfsvereisten. Hierbij werd onderzocht in welke mate de bestaande functionaliteit aansloot bij de noden van de onderneming en welke vereisten niet rechtstreeks werden ondersteund. Voor de geïdentificeerde hiaten werden gerichte oplossingsvoorstellen uitgewerkt en geanalyseerd.
 
-Dit resulteerde in een product dat optimaal voldoet aan de eisen van de speciaalzaak IzyCoffee en rekening houdt met de specifieke kenmerken van deze specifieke onderneming.
+Als afsluitende stap binnen deze fase werd een proof of concept (PoC) ontwikkeld. Dit PoC had tot doel aan te tonen dat de geselecteerde software, mits gerichte aanpassingen, kan worden afgestemd op de eerder gedefinieerde functionele en niet-functionele vereisten. In dit kader werden beperkte wijzigingen aan de broncode ontwikkeld en geïmplementeerd.
+
+Het proof of concept resulteerde in een werkend prototype dat de technische haalbaarheid van de voorgestelde oplossing bevestigt en inzicht biedt in de mate waarin de software kan worden aangepast aan de specifieke behoeften van de koffiespeciaalzaak IzyCoffee, rekening houdend met de operationele context van IzyCoffee.
+
+Het ontwikkelde proof of concept heeft een demonstratief karakter en is niet bedoeld als een volledig productieklaar systeem. De focus lag op het valideren van kernfunctionaliteiten en het aantonen van de technische haalbaarheid van de voorgestelde aanpassingen. Aspecten zoals performantie-optimalisatie, uitgebreide beveiliging, schaalbaarheid op lange termijn en volledige gebruikersvalidatie vielen buiten de scope van dit onderzoek.
 
 \section{Conclusie}
-In deze sectie worden de bevindingen van het uitgevoerde werk samengevat. Er wordt een vergelijking gemaakt met de beoogde conclusies in het huidige werk.
+In deze sectie worden de bevindingen van het uitgevoerde werk samengevat. Er wordt een vergelijking gemaakt tussen de behaalde resultaten en de doelstellingen die in het kader van dit onderzoek werden vooropgesteld.
+
+Op basis van deze vergelijking wordt nagegaan in welke mate het voorgestelde oplossingstraject bijdraagt aan een efficiënter voorraadbeheer binnen de onderzochte context. 
+
 Ten slotte worden suggesties voor verdere verbetering en uitbreiding van de software geformuleerd en gepresenteerd.
 
 
